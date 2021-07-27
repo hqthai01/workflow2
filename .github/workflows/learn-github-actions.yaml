@@ -28,5 +28,5 @@ jobs:
           pip install -r requirements.txt
           pip install robotframework
       - name: Test testcase
-        run: robot  TestSuites/products.robot
+        run: robot  workflow2/TestSuites/products.robot
 
