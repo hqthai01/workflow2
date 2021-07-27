@@ -1,0 +1,16 @@
+URL:    https://pc.s2retail.online/Account/Login
+
+BROWSER:  CHROME
+
+# User central
+USER_CENTRAL:    loitran
+
+# User tenant
+USER_TENANT:  admin
+
+# User store
+USER_STORE:    nvql
+
+PASSWORD:   123qwE
+
+USER_STORE2:    nvbh

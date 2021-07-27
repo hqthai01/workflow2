@@ -1,0 +1,163 @@
+23679:
+  data_tle_create: "TẠO SẢN PHẨM"
+  create_item: "Tạo sản phẩm"
+  data_tle_popup_choose_class: "CHỌN LOẠI SẢN PHẨM"
+  data_type_standar: "Chuẩn"
+  data_tax_VAT: "VAT"
+  data_unit: "Cái"
+  data_tle_price_and_cost: "Giá và Chi phí"
+  products_chk_ItemNormal: "id=ItemClass_Normal"
+
+23680:
+  data_tle_create: "TẠO SẢN PHẨM"
+  create_item: "Tạo sản phẩm"
+  data_tle_popup_choose_class: "CHỌN LOẠI SẢN PHẨM"
+  data_type_standar: "Chuẩn"
+  data_tax_VAT: "VAT"
+  data_unit: "Cái"
+  data_tle_price_and_cost: "Giá và Chi phí"
+  data_department: "Gian hàng PC"
+  data_category: "PC gaming"
+  data_barcode: "Code128"
+  data_tle_tech_infor: "Thông tin kỹ thuật"
+  data_parent_item: "Chuột máy tính Newmen"
+  products_chk_ItemNormal: "id=ItemClass_Normal"
+
+13880:
+  data_tle_create: "TẠO SẢN PHẨM"
+  create_item: "Tạo sản phẩm"
+  data_tle_popup_choose_class: "CHỌN LOẠI SẢN PHẨM"
+  data_tax_VAT: "VAT"
+  data_unit: "Cái"
+  data_tle_price_and_cost: "Giá và Chi phí"
+  data_type_digital: "Kĩ thuật số"
+  data_tle_serial_imei: "Serial/Imei"
+  products_chk_ItemNormal: "id=ItemClass_Normal"
+
+13875:
+  data_tle_create: "TẠO SẢN PHẨM"
+  create_item: "Tạo sản phẩm"
+  data_tle_popup_choose_class: "CHỌN LOẠI SẢN PHẨM"
+  data_tax_VAT: "VAT"
+  data_unit: "Cái"
+  data_tle_price_and_cost: "Giá và Chi phí"
+  data_type_digital: "Kĩ thuật số"
+  data_tle_serial_imei: "Serial/Imei"
+  products_chk_ItemNormal: "id=ItemClass_Normal"
+
+13870:
+  data_tle_create: "TẠO SẢN PHẨM"
+  create_item: "Tạo sản phẩm"
+  data_tle_popup_choose_class: "CHỌN LOẠI SẢN PHẨM"
+  data_tax_VAT: "VAT"
+  data_unit: "Cái"
+  data_tle_price_and_cost: "Giá và Chi phí"
+  data_type_digital: "Kĩ thuật số"
+  data_tle_serial_imei: "Serial/Imei"
+  products_chk_ItemNormal: "id=ItemClass_Normal"
+
+5902:
+  data_tle_popup_update_supplier: "CẬP NHẬT DANH SÁCH NHÀ CUNG CẤP CHO SẢN PHẨM -"
+  data_search_item: "Chuột máy tính Newmen"
+  data_supplier1: "Đức Thành 1"
+  data_supplier2: "Đức Thành 2"
+
+14374:
+  data_item: "PC753951852"
+
+1524:
+  data_item_view_supplier: "032345678922"
+
+10920:
+  data_type_digital: "Kĩ thuật số"
+  data_tax_VAT: "VAT"
+  data_unit: "Bộ"
+
+14370:
+  data_item_name: "Chuột máy tính Newmen"
+
+14461:
+  data_item_parent: "PC741852961"
+  data_tle_item_update: "CẬP NHẬT SẢN PHẨM"
+
+14466:
+  data_item_parent: "PC741852961"
+  data_tle_item_update: "CẬP NHẬT SẢN PHẨM"
+
+25943:
+  data_item_parent: "PC741852961"
+  data_tle_item_update: "CẬP NHẬT SẢN PHẨM"
+
+25944:
+  data_item_parent: "PC741852961"
+  data_tle_item_update: "CẬP NHẬT SẢN PHẨM"
+
+14382:
+  products_chk_ItemMatrix: "id=ItemClass_Matrix"
+  data_tle_popup_choose_class: "CHỌN LOẠI SẢN PHẨM"
+  data_tle_create: "TẠO SẢN PHẨM"
+  data_department: "Quần"
+  data_category: "Quần jean"
+  data_barcode: "Code93Extended"
+  data_tax: "VAT"
+  data_supplier: "Đức Thành 2"
+  data_unit: "Bộ"
+  data_tle_tab_property: "Thuộc tính"
+  data_commission: "50k"
+
+25372:
+  products_chk_ItemMatrix: "id=ItemClass_Matrix"
+  data_tle_popup_choose_class: "CHỌN LOẠI SẢN PHẨM"
+  data_tle_create: "TẠO SẢN PHẨM"
+  data_department: "Quần"
+  data_category: "Quần jean"
+  data_barcode: "Code93Extended"
+  data_tax: "VAT"
+  data_supplier: "Đức Thành 2"
+  data_unit: "Bộ"
+  data_tle_tab_property: "Thuộc tính"
+  data_commission: "50k"
+
+17537:
+  data_tle_item_update: "CẬP NHẬT SẢN PHẨM"
+  data_item_type: "Kĩ thuật số"
+  data_tle_serial_imei: "Serial/Imei"
+  data_tax_VAT: "VAT"
+  data_unit: "Bộ"
+
+17538:
+  data_tle_item_update: "CẬP NHẬT SẢN PHẨM"
+  data_item_type: "Kĩ thuật số"
+  data_tle_serial_imei: "Serial/Imei"
+  data_tax_VAT: "VAT"
+  data_unit: "Bộ"
+
+25945:
+  data_item: "PC753951851"
+  data_store: "Cửa hàng Quận 1"
+
+25946:
+  data_item: "PC753951853"
+  data_store1: "Cửa hàng Quận 1"
+  data_store2: "Cửa hàng Quận 7"
+  data_store3: "Cửa hàng Quận 3"
+
+17427:
+  data_item: "PC753951853"
+  data_image: "Logitech502.jpg"
+
+17428:
+  data_item: "PC753951853"
+  data_image: "Logitech502.jpg"
+
+25947:
+  data_item: "PC753951853"
+
+25948:
+  data_department: "Gian hàng phụ kiện"
+
+25949:
+  data_supplier: "Đức Thành 1"
+
+
+
