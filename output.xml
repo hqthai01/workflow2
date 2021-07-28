@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.0 on win32)" generated="20210727 23:27:35.255" rpa="false" schemaversion="2">
+<suite id="s1" name="Products" source="D:\workflow2\TestSuites\products.robot">
+<test id="s1-t1" name="23679_Create a standar product successfully when filling all required fields">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open the browser and go to the admin page</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>The user logins to the system</arg>
+<arg>${USER_TENANT}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open the browser and go to the admin page" library="Login_Keywords">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser.lower()}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210727 23:27:35.783" level="INFO">Opening browser 'chrome' to base url 'https://pc.s2retail.online/Account/Login'.</msg>
+<status status="PASS" starttime="20210727 23:27:35.775" endtime="20210727 23:27:41.550"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELENIUM_SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210727 23:27:41.550" endtime="20210727 23:27:41.550"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210727 23:27:41.550" endtime="20210727 23:27:41.734"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${current_title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20210727 23:27:41.742" level="INFO">${current_title} = S2Retail</msg>
+<status status="PASS" starttime="20210727 23:27:41.734" endtime="20210727 23:27:41.742"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${TITLE}</arg>
+<arg>${current_title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210727 23:27:41.742" endtime="20210727 23:27:41.742"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:35.775" endtime="20210727 23:27:41.742"/>
+</kw>
+<kw name="The User Logins To the System" library="Login_Keywords">
+<arg>${USER_TENANT}</arg>
+<arg>${PASSWORD}</arg>
+<kw name="Common - Input text to element" library="Common_Keywords">
+<arg>${username_locator}</arg>
+<arg>${username}</arg>
+<doc>Types the given text into the text field identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:27:41.742" endtime="20210727 23:27:41.790"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210727 23:27:41.790" level="INFO">Typing text 'admin' into text field 'id=usernameOrEmailAddress'.</msg>
+<status status="PASS" starttime="20210727 23:27:41.790" endtime="20210727 23:27:41.950"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:41.742" endtime="20210727 23:27:41.950"/>
+</kw>
+<kw name="Common - Input text to element" library="Common_Keywords">
+<arg>${password_locator}</arg>
+<arg>${password}</arg>
+<doc>Types the given text into the text field identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:27:41.958" endtime="20210727 23:27:41.990"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210727 23:27:41.990" level="INFO">Typing text '123qwE' into text field 'id=Password'.</msg>
+<status status="PASS" starttime="20210727 23:27:41.990" endtime="20210727 23:27:42.142"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:41.950" endtime="20210727 23:27:42.142"/>
+</kw>
+<kw name="Common - Click on a button" library="Common_Keywords">
+<arg>${btn_login_locator}</arg>
+<doc>Clicks the button identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:27:42.142" endtime="20210727 23:27:42.174"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${modifier}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210727 23:27:42.174" level="INFO">Clicking ['button', 'input'] 'id=LoginButton' with NULL.</msg>
+<status status="PASS" starttime="20210727 23:27:42.174" endtime="20210727 23:27:46.998"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:42.142" endtime="20210727 23:27:46.998"/>
+</kw>
+<kw name="Verify the user logins to the Admin page successfully" library="Login_Keywords">
+<kw name="Common - Get the title on the current page" library="Common_Keywords">
+<var>${title_current_page}</var>
+<arg>${user_icon_locator}</arg>
+<doc>Returns the title of the current page.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:27:46.998" endtime="20210727 23:27:48.918"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${get_title_current_page}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20210727 23:27:48.918" level="INFO">${get_title_current_page} = S2Retail</msg>
+<status status="PASS" starttime="20210727 23:27:48.918" endtime="20210727 23:27:48.918"/>
+</kw>
+<msg timestamp="20210727 23:27:48.918" level="INFO">${title_current_page} = S2Retail</msg>
+<status status="PASS" starttime="20210727 23:27:46.998" endtime="20210727 23:27:48.918"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${TITLE}</arg>
+<arg>${title_current_page}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210727 23:27:48.926" endtime="20210727 23:27:48.926"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:46.998" endtime="20210727 23:27:48.926"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:41.742" endtime="20210727 23:27:48.926"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:35.767" endtime="20210727 23:27:48.926"/>
+</kw>
+<kw name="Menu - Click on the Items Management menu" library="Menu_Keywords">
+<kw name="Common - Wait until the loading icon loads successfully" library="Common_Keywords">
+<arg>${loader_icon_locator}</arg>
+<doc>The loading icon loads when the user navigates to another page. This keyword will check the loading icon that loaded successfully.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:27:48.926" endtime="20210727 23:27:51.574"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:48.926" endtime="20210727 23:27:51.574"/>
+</kw>
+<kw name="Common - Click on an element" library="Common_Keywords">
+<arg>${homepage_menu_items_management}</arg>
+<doc>Click the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:27:51.582" endtime="20210727 23:27:51.622"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${modifier}</arg>
+<arg>${action_chain}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:27:51.622" level="INFO">Clicking element 'Xpath=//span[contains(text(),'Quản Lý Sản Phẩm')]' with NULL.</msg>
+<status status="PASS" starttime="20210727 23:27:51.622" endtime="20210727 23:27:51.942"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:51.582" endtime="20210727 23:27:51.950"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:48.926" endtime="20210727 23:27:51.950"/>
+</kw>
+<kw name="Navigate To Products Page And Verify The Products Page Appears" library="Products_Keywords">
+<kw name="Menu - Click on the Items menu" library="Menu_Keywords">
+<kw name="Common - Click on an element" library="Common_Keywords">
+<arg>${homepage_menu_items}</arg>
+<doc>Click the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:27:51.950" endtime="20210727 23:27:51.990"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${modifier}</arg>
+<arg>${action_chain}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:27:51.990" level="INFO">Clicking element 'Xpath=//a[@data-url='san-pham']' with NULL.</msg>
+<status status="PASS" starttime="20210727 23:27:51.990" endtime="20210727 23:27:56.405"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:51.950" endtime="20210727 23:27:56.405"/>
+</kw>
+<kw name="Verify navigate to the Items list successfully" library="Menu_Keywords">
+<kw name="Common - Wait until the loading icon loads successfully" library="Common_Keywords">
+<arg>${loader_icon_locator}</arg>
+<doc>The loading icon loads when the user navigates to another page. This keyword will check the loading icon that loaded successfully.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:27:56.405" endtime="20210727 23:27:56.421"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:56.405" endtime="20210727 23:27:56.421"/>
+</kw>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${get_items_list_title}</var>
+<arg>${homepage_list_title}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:27:56.421" endtime="20210727 23:27:56.461"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_text_element}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:27:56.509" level="INFO">${get_text_element} = SẢN PHẨM</msg>
+<status status="PASS" starttime="20210727 23:27:56.461" endtime="20210727 23:27:56.509"/>
+</kw>
+<msg timestamp="20210727 23:27:56.509" level="INFO">${get_items_list_title} = SẢN PHẨM</msg>
+<status status="PASS" starttime="20210727 23:27:56.421" endtime="20210727 23:27:56.509"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${get_items_list_title}</arg>
+<arg>${items_list_title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210727 23:27:56.509" endtime="20210727 23:27:56.509"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:56.405" endtime="20210727 23:27:56.509"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:51.950" endtime="20210727 23:27:56.509"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${products_tle_grid_item}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:27:56.509" endtime="20210727 23:27:56.525"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:51.950" endtime="20210727 23:27:56.525"/>
+</kw>
+<kw name="Open the item class pop-up and choose the item class" library="Products_Keywords">
+<arg>${23679.data_tle_popup_choose_class}</arg>
+<arg>${23679.products_chk_ItemNormal}</arg>
+<kw name="Click On Create Button to open the item class pop-up" library="Products_Keywords">
+<kw name="Common - Click on an element" library="Common_Keywords">
+<arg>${products_btn_Create}</arg>
+<doc>Click the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:27:56.541" endtime="20210727 23:27:56.573"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${modifier}</arg>
+<arg>${action_chain}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:27:56.573" level="INFO">Clicking element 'id=btnCreateItem' with NULL.</msg>
+<status status="PASS" starttime="20210727 23:27:56.573" endtime="20210727 23:27:56.909"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:56.541" endtime="20210727 23:27:56.909"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:56.541" endtime="20210727 23:27:56.909"/>
+</kw>
+<kw name="Verify The item class Pop-Up Appears successfully" library="Products_Keywords">
+<arg>${data_tle_popup_choose_type}</arg>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${Pop_Up_Title}</var>
+<arg>${products_PopUp_ProductType}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:27:56.909" endtime="20210727 23:27:57.029"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_text_element}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:27:57.061" level="INFO">${get_text_element} = CHỌN LOẠI SẢN PHẨM</msg>
+<status status="PASS" starttime="20210727 23:27:57.029" endtime="20210727 23:27:57.061"/>
+</kw>
+<msg timestamp="20210727 23:27:57.061" level="INFO">${Pop_Up_Title} = CHỌN LOẠI SẢN PHẨM</msg>
+<status status="PASS" starttime="20210727 23:27:56.909" endtime="20210727 23:27:57.061"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${data_tle_popup_choose_type}</arg>
+<arg>${Pop_Up_Title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210727 23:27:57.061" endtime="20210727 23:27:57.061"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:56.909" endtime="20210727 23:27:57.061"/>
+</kw>
+<kw name="Choose the item class for new item" library="Products_Keywords">
+<arg>${item_class}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${products_PopUp_ProductType}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:27:57.061" endtime="20210727 23:27:57.093"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${item_class}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:27:57.093" endtime="20210727 23:27:57.541"/>
+</kw>
+<kw name="Common - Click on an element" library="Common_Keywords">
+<arg>${item_class}</arg>
+<doc>Click the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:27:57.541" endtime="20210727 23:27:57.565"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${modifier}</arg>
+<arg>${action_chain}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:27:57.565" level="INFO">Clicking element 'id=ItemClass_Normal' with NULL.</msg>
+<status status="PASS" starttime="20210727 23:27:57.565" endtime="20210727 23:27:57.885"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:57.541" endtime="20210727 23:27:57.885"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:57.061" endtime="20210727 23:27:57.893"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:56.525" endtime="20210727 23:27:57.893"/>
+</kw>
+<kw name="Click On Create Product Button For Navigate To Create Product Page" library="Products_Keywords">
+<kw name="Common - Click on an element" library="Common_Keywords">
+<arg>${products_btn_ItemClass}</arg>
+<doc>Click the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:27:57.893" endtime="20210727 23:27:57.925"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${modifier}</arg>
+<arg>${action_chain}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:27:57.925" level="INFO">Clicking element 'id=btnItemClass' with NULL.</msg>
+<status status="PASS" starttime="20210727 23:27:57.925" endtime="20210727 23:28:01.773"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:57.893" endtime="20210727 23:28:01.773"/>
+</kw>
+<kw name="Common - Wait until the loading icon loads successfully" library="Common_Keywords">
+<arg>${loader_icon_locator}</arg>
+<doc>The loading icon loads when the user navigates to another page. This keyword will check the loading icon that loaded successfully.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:01.773" endtime="20210727 23:28:01.789"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:01.773" endtime="20210727 23:28:01.789"/>
+</kw>
+<status status="PASS" starttime="20210727 23:27:57.893" endtime="20210727 23:28:01.789"/>
+</kw>
+<kw name="Verify The Create Product Page Appear successfully" library="Products_Keywords">
+<arg>${23679.data_tle_create}</arg>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${title_create}</var>
+<arg>${products_tle_Create}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:01.805" endtime="20210727 23:28:01.837"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_text_element}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:01.861" level="INFO">${get_text_element} = TẠO SẢN PHẨM</msg>
+<status status="PASS" starttime="20210727 23:28:01.837" endtime="20210727 23:28:01.861"/>
+</kw>
+<msg timestamp="20210727 23:28:01.861" level="INFO">${title_create} = TẠO SẢN PHẨM</msg>
+<status status="PASS" starttime="20210727 23:28:01.805" endtime="20210727 23:28:01.861"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${title}</arg>
+<arg>${title_create}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210727 23:28:01.861" endtime="20210727 23:28:01.861"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:01.789" endtime="20210727 23:28:01.861"/>
+</kw>
+<kw name="Input item type for the item" library="Products_Keywords">
+<arg>${23679.data_type_standar}</arg>
+<kw name="Common - Choose a value from combobox" library="Common_Keywords">
+<arg>${products_cbx_ItemClass}</arg>
+<arg>${products_cbx_Type.replace('type','${item_type}')}</arg>
+<doc>Click the combobox and choose a value identified by locator</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${combobox}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:01.869" endtime="20210727 23:28:04.003"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${combobox}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:04.003" endtime="20210727 23:28:04.027"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${combobox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:04.027" level="INFO">Clicking element '//span[@aria-controls='ddlItemType_listbox']'.</msg>
+<status status="PASS" starttime="20210727 23:28:04.027" endtime="20210727 23:28:04.099"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${combobox}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210727 23:28:04.099" endtime="20210727 23:28:04.387"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${combobox_value}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:04.387" endtime="20210727 23:28:05.035"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${combobox_value}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:05.035" endtime="20210727 23:28:05.059"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${combobox_value}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:05.059" level="INFO">Clicking element '//ul[@id='ddlItemType_listbox']//li[contains(text(),'Chuẩn')]'.</msg>
+<status status="PASS" starttime="20210727 23:28:05.059" endtime="20210727 23:28:05.139"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:01.869" endtime="20210727 23:28:05.139"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:01.861" endtime="20210727 23:28:05.139"/>
+</kw>
+<kw name="Input code for the standar item" library="Products_Keywords">
+<var>${item_code}</var>
+<kw name="Generate Random String" library="String">
+<var>${ItemCode}</var>
+<arg>7</arg>
+<arg>123456789</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20210727 23:28:05.139" level="INFO">${ItemCode} = 4979595</msg>
+<status status="PASS" starttime="20210727 23:28:05.139" endtime="20210727 23:28:05.139"/>
+</kw>
+<kw name="Common - Press a key on the keyboard" library="Common_Keywords">
+<arg>${products_txt_standar_code}</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:05.139" endtime="20210727 23:28:05.187"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${name_key}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210727 23:28:05.187" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to id=txtItemCode element.</msg>
+<msg timestamp="20210727 23:28:05.491" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20210727 23:28:05.491" level="INFO">Sending key a</msg>
+<msg timestamp="20210727 23:28:05.491" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20210727 23:28:05.491" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20210727 23:28:05.491" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20210727 23:28:05.187" endtime="20210727 23:28:05.507"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:05.139" endtime="20210727 23:28:05.507"/>
+</kw>
+<kw name="Common - Input text to element" library="Common_Keywords">
+<arg>${products_txt_standar_code}</arg>
+<arg>${ItemCode}</arg>
+<doc>Types the given text into the text field identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:05.507" endtime="20210727 23:28:05.531"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:05.531" level="INFO">Typing text '4979595' into text field 'id=txtItemCode'.</msg>
+<status status="PASS" starttime="20210727 23:28:05.531" endtime="20210727 23:28:05.627"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:05.507" endtime="20210727 23:28:05.627"/>
+</kw>
+<msg timestamp="20210727 23:28:05.627" level="INFO">${item_code} = 4979595</msg>
+<status status="PASS" starttime="20210727 23:28:05.139" endtime="20210727 23:28:05.627"/>
+</kw>
+<kw name="Input Name for the item" library="Products_Keywords">
+<kw name="Generate Random String" library="String">
+<var>${ItemName}</var>
+<arg>10</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20210727 23:28:05.635" level="INFO">${ItemName} = hhJKunEckW</msg>
+<status status="PASS" starttime="20210727 23:28:05.635" endtime="20210727 23:28:05.635"/>
+</kw>
+<kw name="Common - Press a key on the keyboard" library="Common_Keywords">
+<arg>${products_txt_standar_name}</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:05.635" endtime="20210727 23:28:05.659"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${name_key}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210727 23:28:05.667" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to id=ItemCreateDto_ItemName element.</msg>
+<msg timestamp="20210727 23:28:05.971" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20210727 23:28:05.971" level="INFO">Sending key a</msg>
+<msg timestamp="20210727 23:28:05.971" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20210727 23:28:05.971" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20210727 23:28:05.971" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20210727 23:28:05.667" endtime="20210727 23:28:05.987"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:05.635" endtime="20210727 23:28:05.987"/>
+</kw>
+<kw name="Common - Input text to element" library="Common_Keywords">
+<arg>${products_txt_standar_name}</arg>
+<arg>${ItemName}</arg>
+<doc>Types the given text into the text field identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:05.987" endtime="20210727 23:28:06.019"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:06.019" level="INFO">Typing text 'hhJKunEckW' into text field 'id=ItemCreateDto_ItemName'.</msg>
+<status status="PASS" starttime="20210727 23:28:06.019" endtime="20210727 23:28:06.123"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:05.987" endtime="20210727 23:28:06.123"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:05.635" endtime="20210727 23:28:06.123"/>
+</kw>
+<kw name="Input tax For the item" library="Products_Keywords">
+<arg>${23679.data_tax_VAT}</arg>
+<kw name="Common - Choose a value from combobox" library="Common_Keywords">
+<arg>${products_cbx_ItemTax}</arg>
+<arg>${products_input_ItemTax.replace('tax','${item_tax}')}</arg>
+<doc>Click the combobox and choose a value identified by locator</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${combobox}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:06.131" endtime="20210727 23:28:06.147"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${combobox}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:06.147" endtime="20210727 23:28:06.195"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${combobox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:06.195" level="INFO">Clicking element '//span[@aria-controls='ddlItemTax_listbox']'.</msg>
+<status status="PASS" starttime="20210727 23:28:06.195" endtime="20210727 23:28:06.283"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${combobox}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210727 23:28:06.283" endtime="20210727 23:28:06.571"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${combobox_value}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:06.571" endtime="20210727 23:28:06.587"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${combobox_value}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:06.587" endtime="20210727 23:28:06.611"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${combobox_value}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:06.611" level="INFO">Clicking element '//ul[@id='ddlItemTax_listbox']//li[contains(text(),'VAT')]'.</msg>
+<status status="PASS" starttime="20210727 23:28:06.611" endtime="20210727 23:28:06.667"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:06.131" endtime="20210727 23:28:06.667"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:06.123" endtime="20210727 23:28:06.667"/>
+</kw>
+<kw name="Navigate to PRICE AND COST tab" library="Products_Keywords">
+<kw name="Common - Click on an element" library="Common_Keywords">
+<arg>${products_tab_PriceAndCost}</arg>
+<doc>Click the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:06.667" endtime="20210727 23:28:06.699"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${modifier}</arg>
+<arg>${action_chain}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:06.699" level="INFO">Clicking element '//span[contains(text(),'Giá và Chi phí')]' with NULL.</msg>
+<status status="PASS" starttime="20210727 23:28:06.699" endtime="20210727 23:28:07.011"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:06.667" endtime="20210727 23:28:07.019"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:06.667" endtime="20210727 23:28:07.019"/>
+</kw>
+<kw name="Verify The PRICE AND COST tab appear successfully" library="Products_Keywords">
+<arg>${23679.data_tle_price_and_cost}</arg>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${title_PriceAndCost}</var>
+<arg>${products_tab_PriceAndCost}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:07.027" endtime="20210727 23:28:07.051"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_text_element}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:07.099" level="INFO">${get_text_element} = Giá và Chi phí</msg>
+<status status="PASS" starttime="20210727 23:28:07.051" endtime="20210727 23:28:07.099"/>
+</kw>
+<msg timestamp="20210727 23:28:07.099" level="INFO">${title_PriceAndCost} = Giá và Chi phí</msg>
+<status status="PASS" starttime="20210727 23:28:07.027" endtime="20210727 23:28:07.099"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${data_title_price_and_cost}</arg>
+<arg>${title_PriceAndCost}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210727 23:28:07.099" endtime="20210727 23:28:07.099"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:07.019" endtime="20210727 23:28:07.099"/>
+</kw>
+<kw name="Input unit for the item" library="Products_Keywords">
+<arg>${23679.data_unit}</arg>
+<kw name="Common - Choose a value from combobox" library="Common_Keywords">
+<arg>${products_cbx_ItemUnit}</arg>
+<arg>${products_input_ItemUnit.replace('unit','${item_unit}')}</arg>
+<doc>Click the combobox and choose a value identified by locator</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${combobox}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:07.115" endtime="20210727 23:28:07.139"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${combobox}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:07.139" endtime="20210727 23:28:07.387"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${combobox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:07.395" level="INFO">Clicking element '//span[@aria-controls='ddlUnitOfMeasure_listbox']'.</msg>
+<status status="PASS" starttime="20210727 23:28:07.395" endtime="20210727 23:28:07.483"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${combobox}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210727 23:28:07.483" endtime="20210727 23:28:07.779"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${combobox_value}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:07.779" endtime="20210727 23:28:07.794"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${combobox_value}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:07.794" endtime="20210727 23:28:07.818"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${combobox_value}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:07.818" level="INFO">Clicking element '//ul[@id='ddlUnitOfMeasure_listbox']//li[contains(text(),'Cái')]'.</msg>
+<status status="PASS" starttime="20210727 23:28:07.818" endtime="20210727 23:28:07.874"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:07.107" endtime="20210727 23:28:07.882"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:07.099" endtime="20210727 23:28:07.882"/>
+</kw>
+<kw name="Input Cost for the item" library="Products_Keywords">
+<kw name="Common - Click on an element" library="Common_Keywords">
+<arg>${products_cell_Cost}</arg>
+<doc>Click the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:07.882" endtime="20210727 23:28:07.946"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${modifier}</arg>
+<arg>${action_chain}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:07.946" level="INFO">Clicking element '//input[@placeholder='Nhập giá vốn']' with NULL.</msg>
+<status status="PASS" starttime="20210727 23:28:07.946" endtime="20210727 23:28:08.274"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:07.882" endtime="20210727 23:28:08.274"/>
+</kw>
+<kw name="Common - Press a key on the keyboard" library="Common_Keywords">
+<arg>${products_txt_cost}</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:08.274" endtime="20210727 23:28:08.306"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${name_key}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210727 23:28:08.314" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to id=txtCost element.</msg>
+<msg timestamp="20210727 23:28:08.610" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20210727 23:28:08.610" level="INFO">Sending key a</msg>
+<msg timestamp="20210727 23:28:08.610" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20210727 23:28:08.610" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20210727 23:28:08.610" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20210727 23:28:08.306" endtime="20210727 23:28:08.626"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:08.274" endtime="20210727 23:28:08.626"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${item_cost}</var>
+<arg>3</arg>
+<arg>123456789</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20210727 23:28:08.626" level="INFO">${item_cost} = 949</msg>
+<status status="PASS" starttime="20210727 23:28:08.626" endtime="20210727 23:28:08.626"/>
+</kw>
+<kw name="Common - Input text to element" library="Common_Keywords">
+<arg>${products_txt_cost}</arg>
+<arg>${item_cost}</arg>
+<doc>Types the given text into the text field identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:08.626" endtime="20210727 23:28:08.650"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:08.650" level="INFO">Typing text '949' into text field 'id=txtCost'.</msg>
+<status status="PASS" starttime="20210727 23:28:08.650" endtime="20210727 23:28:08.730"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:08.626" endtime="20210727 23:28:08.730"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:07.882" endtime="20210727 23:28:08.730"/>
+</kw>
+<kw name="Input Price for the item" library="Products_Keywords">
+<kw name="Common - Click on an element" library="Common_Keywords">
+<arg>${products_cell_Price}</arg>
+<doc>Click the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:08.730" endtime="20210727 23:28:08.762"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${modifier}</arg>
+<arg>${action_chain}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:08.762" level="INFO">Clicking element '//input[@placeholder='Nhập giá bán']' with NULL.</msg>
+<status status="PASS" starttime="20210727 23:28:08.762" endtime="20210727 23:28:09.074"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:08.730" endtime="20210727 23:28:09.074"/>
+</kw>
+<kw name="Common - Press a key on the keyboard" library="Common_Keywords">
+<arg>${products_txt_Price}</arg>
+<arg>CTRL+a+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:09.082" endtime="20210727 23:28:09.114"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${name_key}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210727 23:28:09.114" level="INFO">Sending key(s) ('CTRL+a+BACKSPACE',) to id=txtPrice element.</msg>
+<msg timestamp="20210727 23:28:09.418" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20210727 23:28:09.426" level="INFO">Sending key a</msg>
+<msg timestamp="20210727 23:28:09.426" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg timestamp="20210727 23:28:09.426" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20210727 23:28:09.426" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20210727 23:28:09.114" endtime="20210727 23:28:09.434"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:09.082" endtime="20210727 23:28:09.434"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${item_price}</var>
+<arg>5</arg>
+<arg>123456789</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20210727 23:28:09.434" level="INFO">${item_price} = 89284</msg>
+<status status="PASS" starttime="20210727 23:28:09.434" endtime="20210727 23:28:09.434"/>
+</kw>
+<kw name="Common - Input text to element" library="Common_Keywords">
+<arg>${products_txt_Price}</arg>
+<arg>${item_price}</arg>
+<doc>Types the given text into the text field identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:09.434" endtime="20210727 23:28:09.458"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:09.458" level="INFO">Typing text '89284' into text field 'id=txtPrice'.</msg>
+<status status="PASS" starttime="20210727 23:28:09.458" endtime="20210727 23:28:09.562"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:09.434" endtime="20210727 23:28:09.562"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:08.730" endtime="20210727 23:28:09.562"/>
+</kw>
+<kw name="Click on save button to create a product" library="Products_Keywords">
+<kw name="Common - Click on an element" library="Common_Keywords">
+<arg>${products_btn_save}</arg>
+<doc>Click the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:09.562" endtime="20210727 23:28:09.594"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${modifier}</arg>
+<arg>${action_chain}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:09.594" level="INFO">Clicking element '//span[@class='k-icon k-i-save']' with NULL.</msg>
+<status status="PASS" starttime="20210727 23:28:09.594" endtime="20210727 23:28:10.498"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:09.562" endtime="20210727 23:28:10.498"/>
+</kw>
+<kw name="Common - Wait until the loading icon loads successfully" library="Common_Keywords">
+<arg>${loader_icon_locator}</arg>
+<doc>The loading icon loads when the user navigates to another page. This keyword will check the loading icon that loaded successfully.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:10.498" endtime="20210727 23:28:10.522"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:10.498" endtime="20210727 23:28:10.522"/>
+</kw>
+<kw name="Menu - Click on the Items menu" library="Menu_Keywords">
+<kw name="Common - Click on an element" library="Common_Keywords">
+<arg>${homepage_menu_items}</arg>
+<doc>Click the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:10.522" endtime="20210727 23:28:10.563"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${modifier}</arg>
+<arg>${action_chain}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:10.563" level="INFO">Clicking element 'Xpath=//a[@data-url='san-pham']' with NULL.</msg>
+<status status="PASS" starttime="20210727 23:28:10.563" endtime="20210727 23:28:15.215"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:10.522" endtime="20210727 23:28:15.215"/>
+</kw>
+<kw name="Verify navigate to the Items list successfully" library="Menu_Keywords">
+<kw name="Common - Wait until the loading icon loads successfully" library="Common_Keywords">
+<arg>${loader_icon_locator}</arg>
+<doc>The loading icon loads when the user navigates to another page. This keyword will check the loading icon that loaded successfully.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:15.215" endtime="20210727 23:28:15.239"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:15.215" endtime="20210727 23:28:15.239"/>
+</kw>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${get_items_list_title}</var>
+<arg>${homepage_list_title}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:15.239" endtime="20210727 23:28:15.279"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_text_element}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:15.319" level="INFO">${get_text_element} = SẢN PHẨM</msg>
+<status status="PASS" starttime="20210727 23:28:15.279" endtime="20210727 23:28:15.319"/>
+</kw>
+<msg timestamp="20210727 23:28:15.319" level="INFO">${get_items_list_title} = SẢN PHẨM</msg>
+<status status="PASS" starttime="20210727 23:28:15.239" endtime="20210727 23:28:15.319"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${get_items_list_title}</arg>
+<arg>${items_list_title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20210727 23:28:15.319" endtime="20210727 23:28:15.319"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:15.215" endtime="20210727 23:28:15.319"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:10.522" endtime="20210727 23:28:15.319"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${products_table_row}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:15.319" endtime="20210727 23:28:15.759"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:09.562" endtime="20210727 23:28:15.759"/>
+</kw>
+<kw name="Verify data of standar products" library="Products_Keywords">
+<arg>${item_code}</arg>
+<kw name="Common - Search data" library="Common_Keywords">
+<arg>${item_create_code}</arg>
+<kw name="Common - Input text to element" library="Common_Keywords">
+<arg>${txt_search}</arg>
+<arg>${text}</arg>
+<doc>Types the given text into the text field identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:15.759" endtime="20210727 23:28:15.791"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<arg>clear=True</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210727 23:28:15.791" level="INFO">Typing text '4979595' into text field 'id=search-grid'.</msg>
+<status status="PASS" starttime="20210727 23:28:15.791" endtime="20210727 23:28:15.935"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:15.759" endtime="20210727 23:28:15.935"/>
+</kw>
+<kw name="Common - Wait until the loading icon loads successfully" library="Common_Keywords">
+<arg>${loader_icon_locator}</arg>
+<doc>The loading icon loads when the user navigates to another page. This keyword will check the loading icon that loaded successfully.</doc>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:15.935" endtime="20210727 23:28:15.943"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:15.935" endtime="20210727 23:28:15.943"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${data_table_row}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:15.943" endtime="20210727 23:28:15.959"/>
+</kw>
+<kw name="Common - Press a key on the keyboard" library="Common_Keywords">
+<arg>${txt_search}</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210727 23:28:15.959" endtime="20210727 23:28:15.983"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${name_key}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20210727 23:28:15.983" level="INFO">Sending key(s) ('TAB',) to id=search-grid element.</msg>
+<msg timestamp="20210727 23:28:16.287" level="INFO">Pressing special key TAB to element.</msg>
+<msg timestamp="20210727 23:28:16.287" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20210727 23:28:15.983" endtime="20210727 23:28:16.303"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:15.959" endtime="20210727 23:28:16.303"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:15.759" endtime="20210727 23:28:16.303"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${products_table_row}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20210727 23:28:16.303" endtime="20210727 23:28:16.311"/>
+</kw>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${grid_item_code}</var>
+<arg>${products_table_cell.replace('number','2')}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210727 23:28:45.572" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=92.0.4515.107)
+</msg>
+<status status="FAIL" starttime="20210727 23:28:33.493" endtime="20210727 23:28:45.572"/>
+</kw>
+<msg timestamp="20210727 23:28:45.572" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=92.0.4515.107)
+</msg>
+<msg timestamp="20210727 23:28:45.588" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=92.0.4515.107)
+</msg>
+<status status="FAIL" starttime="20210727 23:28:16.319" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${get_text_element}</var>
+<arg>${locator}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<status status="FAIL" starttime="20210727 23:28:16.319" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${grid_item_name}</var>
+<arg>${products_table_cell.replace('number','3')}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${grid_item_type}</var>
+<arg>${products_table_cell.replace('number','4')}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${grid_item_unit}</var>
+<arg>${products_table_cell.replace('number','5')}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${grid_item_price}</var>
+<arg>${products_table_cell.replace('number','6')}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Common - Click on an element" library="Common_Keywords">
+<arg>${products_grid_item_code.replace('item_code','${item_create_code}')}</arg>
+<doc>Click the element identified by locator.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Common - Wait until the loading icon loads successfully" library="Common_Keywords">
+<arg>${loader_icon_locator}</arg>
+<doc>The loading icon loads when the user navigates to another page. This keyword will check the loading icon that loaded successfully.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${item_type}</var>
+<arg>${item_label_detail.replace('number','1')}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${item_code}</var>
+<arg>${item_label_detail.replace('number','2')}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${item_name}</var>
+<arg>${item_label_detail.replace('number','3')}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${grid_item_code}</arg>
+<arg>${item_code}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${grid_item_name}</arg>
+<arg>${item_name}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${grid_item_type}</arg>
+<arg>${item_type}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Navigate to PRICE AND COST tab" library="Products_Keywords">
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${item_unit}</var>
+<arg>${item_label_detail.replace('number','11')}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Common - Get text an element" library="Common_Keywords">
+<var>${item_price}</var>
+<arg>${item_label_detail.replace('number','13')}</arg>
+<doc>Returns the text value of the element identified by locator.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${grid_item_unit}</arg>
+<arg>${item_unit}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${grid_item_price}</arg>
+<arg>${item_price}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Menu - Click on the Items menu" library="Menu_Keywords">
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Common - Wait until the loading icon loads successfully" library="Common_Keywords">
+<arg>${loader_icon_locator}</arg>
+<doc>The loading icon loads when the user navigates to another page. This keyword will check the loading icon that loaded successfully.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${products_grid_item_code.replace('item_code','${item_create_code}')}</arg>
+<arg>${TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:45.588" endtime="20210727 23:28:45.588"/>
+</kw>
+<status status="FAIL" starttime="20210727 23:28:15.759" endtime="20210727 23:28:45.588"/>
+</kw>
+<kw name="Remove item After Create Product Successfully" library="Products_Keywords">
+<arg>${item_code}</arg>
+<status status="NOT RUN" starttime="20210727 23:28:45.596" endtime="20210727 23:28:45.596"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="TEARDOWN">
+<arg>Close All Browsers</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Close All Browsers" library="Login_Keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210727 23:28:45.596" endtime="20210727 23:28:47.676"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:45.596" endtime="20210727 23:28:47.676"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:45.596" endtime="20210727 23:28:47.676"/>
+</kw>
+<tag>23679</tag>
+<status status="FAIL" starttime="20210727 23:27:35.767" endtime="20210727 23:28:47.676">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=92.0.4515.107)
+</status>
+</test>
+<test id="s1-t2" name="23680_Create a standar product successfully when filling all fields">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open the browser and go to the admin page</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>The user logins to the system</arg>
+<arg>${USER_TENANT}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open the browser and go to the admin page" library="Login_Keywords">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser.lower()}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210727 23:28:47.692" level="INFO">Opening browser 'chrome' to base url 'https://pc.s2retail.online/Account/Login'.</msg>
+<status status="PASS" starttime="20210727 23:28:47.684" endtime="20210727 23:28:52.299"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${SELENIUM_SPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20210727 23:28:52.299" endtime="20210727 23:28:52.299"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210727 23:28:52.315" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=92.0.4515.107)
+</msg>
+<status status="FAIL" starttime="20210727 23:28:52.299" endtime="20210727 23:28:52.315"/>
+</kw>
+<msg timestamp="20210727 23:28:52.315" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=92.0.4515.107)
+</msg>
+<msg timestamp="20210727 23:28:52.315" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=92.0.4515.107)
+</msg>
+<status status="FAIL" starttime="20210727 23:28:52.299" endtime="20210727 23:28:52.315"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${current_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:52.315" endtime="20210727 23:28:52.315"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${TITLE}</arg>
+<arg>${current_title}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="NOT RUN" starttime="20210727 23:28:52.315" endtime="20210727 23:28:52.315"/>
+</kw>
+<status status="FAIL" starttime="20210727 23:28:47.684" endtime="20210727 23:28:52.315"/>
+</kw>
+<status status="FAIL" starttime="20210727 23:28:47.684" endtime="20210727 23:28:52.323"/>
+</kw>
+<kw name="Run Keywords" library="BuiltIn" type="TEARDOWN">
+<arg>Close All Browsers</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Close All Browsers" library="Login_Keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210727 23:28:52.323" endtime="20210727 23:28:54.587"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:52.323" endtime="20210727 23:28:54.587"/>
+</kw>
+<status status="PASS" starttime="20210727 23:28:52.323" endtime="20210727 23:28:54.587"/>
+</kw>
+<tag>23680</tag>
+<status status="FAIL" starttime="20210727 23:28:47.684" endtime="20210727 23:28:54.587">Setup failed:
+NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=92.0.4515.107)
+</status>
+</test>
+<status status="FAIL" starttime="20210727 23:27:35.255" endtime="20210727 23:28:54.595"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="2" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">23679</stat>
+<stat pass="0" fail="1" skip="0">23680</stat>
+</tag>
+<suite>
+<stat pass="0" fail="2" skip="0" id="s1" name="Products">Products</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210727 23:27:35.735" level="ERROR">Error in file 'D:\workflow2\Resources\Env_Variables.robot' on line 11: Resource file 'Suppliers_Keywords.robot' does not exist.</msg>
+<msg timestamp="20210727 23:27:35.743" level="ERROR">Error in file 'D:\workflow2\Resources\Env_Variables.robot' on line 12: Resource file 'Quote_Order.robot' does not exist.</msg>
+<msg timestamp="20210727 23:27:35.743" level="ERROR">Error in file 'D:\workflow2\Resources\Env_Variables.robot' on line 13: Resource file 'Customers_Keywords.robot' does not exist.</msg>
+<msg timestamp="20210727 23:27:35.743" level="ERROR">Error in file 'D:\workflow2\Resources\Env_Variables.robot' on line 15: Resource file 'Sales_Tax_Keywords.robot' does not exist.</msg>
+<msg timestamp="20210727 23:27:35.751" level="ERROR">Error in file 'D:\workflow2\Resources\Env_Variables.robot' on line 16: Resource file 'Unit_Of_Measurement_Keywords.robot' does not exist.</msg>
+<msg timestamp="20210727 23:27:35.751" level="ERROR">Error in file 'D:\workflow2\Resources\Env_Variables.robot' on line 17: Resource file 'Tax_Group_Keywords.robot' does not exist.</msg>
+<msg timestamp="20210727 23:27:35.751" level="ERROR">Error in file 'D:\workflow2\Resources\Env_Variables.robot' on line 18: Resource file 'Employee_Keywords.robot' does not exist.</msg>
+<msg timestamp="20210727 23:27:35.751" level="ERROR">Error in file 'D:\workflow2\Resources\Env_Variables.robot' on line 19: Resource file 'Transfer_In_Keywords.robot' does not exist.</msg>
+<msg timestamp="20210727 23:27:35.759" level="ERROR">Error in file 'D:\workflow2\Resources\Env_Variables.robot' on line 20: Resource file 'Purchase_Order_Keywords.robot' does not exist.</msg>
+<msg timestamp="20210727 23:27:35.759" level="ERROR">Error in file 'D:\workflow2\Resources\Env_Variables.robot' on line 21: Resource file 'Transfer_Out_Keywords.robot' does not exist.</msg>
+<msg timestamp="20210727 23:27:35.759" level="ERROR">Error in file 'D:\workflow2\Resources\Env_Variables.robot' on line 22: Resource file 'Receipt_Voucher_Keywords.robot' does not exist.</msg>
+<msg timestamp="20210727 23:27:35.759" level="ERROR">Error in file 'D:\workflow2\Resources\Env_Variables.robot' on line 23: Resource file 'Payment_Voucher_Keywords.robot' does not exist.</msg>
+<msg timestamp="20210727 23:28:45.572" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: WebDriverException: Message: chrome not reachable
+  (Session info: chrome=92.0.4515.107)
+</msg>
+<msg timestamp="20210727 23:28:52.315" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=92.0.4515.107)
+</msg>
+</errors>
+</robot>
