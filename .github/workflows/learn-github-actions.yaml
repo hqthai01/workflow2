@@ -9,11 +9,7 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        python-version: [3.9]
+    runs-on: window-10-tung
     steps:
       - uses: actions/checkout@v2
       - name: Set up Python 
