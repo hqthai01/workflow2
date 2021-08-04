@@ -149,7 +149,7 @@ Test Teardown       Run Keywords     Close All Browsers
 #
 #    Input tax For the item  ${13875.data_tax_VAT}
 #
-#    Navigate to PRICE AND COST tab and verify the tab appear successfully  ${13875.data_tle_price_and_cost}
+#    Navigate to PRICE AND COST tab and verify the tab appe  ar successfully  ${13875.data_tle_price_and_cost}
 #
 #    Input unit for the item    ${13875.data_unit}
 #
