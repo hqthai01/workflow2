@@ -5,12 +5,23 @@ Variables  ../Locators/Common_Locators.py
 
 Open the browser and go to the admin page
     [Arguments]     ${url}     ${browser}
-
-    open browser    ${url}    ${browser.lower()}
-
+    ${chrome_options} =     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
+    Call Method    ${chrome_options}   add_argument    --headless
+    Call Method    ${chrome_options}   add_argument    --disable-gpu
+    Call Method    ${chrome_options}   add_argument    --disable-extensions
+    Call Method    ${chrome_options}   add_argument    --no-sandbox
+    Call Method    ${chrome_options}   add_argument    --window-size\=1920,1080
+    ${options}=     Call Method     ${chrome_options}    to_capabilities
+    ${exec_path}=    /usr/lib/chromium-browser/chromedriver
+    Create Webdriver    Chrome    executable_path=${exec_path}   chrome_options=${chrome options}
+    Go To    ${url}
     set selenium speed    ${SELENIUM_SPEED}
-
     Maximize Browser Window
+    # open browser    ${url}    ${browser.lower()}
+
+    # set selenium speed    ${SELENIUM_SPEED}
+
+    # Maximize Browser Window
 
     ${current_title}        Get Title
 
