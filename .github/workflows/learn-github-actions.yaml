@@ -20,22 +20,23 @@ jobs:
         run: python -c "import sys; print(sys.version)"
       - name: Install dependencies
         run: |
+          sudo apt-get install chromium-chromedriver
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install robotframework
           pip install --upgrade robotframework-seleniumlibrary
           pip install pyyaml
 
-          # Install Chrome.
-      - name: Install Chrome
-        run: |
-          wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-          sudo apt install ./google-chrome-stable_current_amd64.deb
-        # Install ChromeDriver.
-      - name: Install ChromeDriver
-        run: |
-          pip install webdrivermanager
-          webdrivermanager chrome --linkpath Driver
+      # Install Chrome.
+      #- name: Install Chrome
+      # run: |
+      # wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      # sudo apt install ./google-chrome-stable_current_amd64.deb
+      # Install ChromeDriver.
+      # - name: Install ChromeDriver
+      #   run: |
+      #     pip install webdrivermanager
+      #     webdrivermanager chrome --linkpath Driver
       - name: Test testcase
         run: robot  TestSuites/Products.robot
 
