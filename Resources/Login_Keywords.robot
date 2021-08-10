@@ -12,8 +12,7 @@ Open the browser and go to the admin page
     Call Method    ${chrome_options}   add_argument    --no-sandbox
     Call Method    ${chrome_options}   add_argument    --window-size\=1920,1080
     ${options}=     Call Method     ${chrome_options}    to_capabilities
-    ${exec_path}=    /usr/lib/chromium-browser/chromedriver
-    Create Webdriver    Chrome    executable_path=${exec_path}   chrome_options=${chrome options}
+    Create Webdriver    Chrome    executable_path=/usr/lib/chromium-browser/chromedriver   chrome_options=${chrome options}
     Go To    ${url}
     set selenium speed    ${SELENIUM_SPEED}
     Maximize Browser Window
